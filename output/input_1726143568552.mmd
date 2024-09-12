@@ -1,0 +1,14 @@
+graph TB
+    Power_Plant((Power Plant))
+    Transmission_Line[Transmission Line]
+    Substation((Substation))
+    Distribution_Line[Distribution Line]
+    Load_Center((Load Center))
+
+    Power_Plant --> Transmission_Line
+    Transmission_Line --> Substation
+    Substation --> Distribution_Line
+    Distribution_Line --> Load_Center
+
+    classDef advanced fill:#f9d2d2, stroke:#333;
+    class Power_Plant, Substation advanced;

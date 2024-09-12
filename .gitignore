@@ -1,0 +1,9 @@
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# Other common files to ignore
+node_modules/
+*.log

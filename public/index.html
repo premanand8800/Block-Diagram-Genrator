@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Language Diagram Generator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #query {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #1e293b;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #generateBtn {
+            background-color: #3b82f6;
+            color: white;
+            flex-grow: 1;
+        }
+        #refineBtn {
+            background-color: #22c55e;
+            color: white;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .share-buttons button {
+            flex-grow: 1;
+        }
+        #saveBtn {
+            background-color: #334155;
+            color: white;
+        }
+        #linkedinBtn {
+            background-color: #0077b5;
+            color: white;
+        }
+        #instagramBtn {
+            background-color: #e1306c;
+            color: white;
+        }
+        #facebookBtn {
+            background-color: #1877f2;
+            color: white;
+        }
+        #result {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 5px;
+            min-height: 200px;
+        }
+        #settingsBtn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1e293b;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .dropdown-content button {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+        }
+        .dropdown-content button:hover {
+            background-color: #2c3e50;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Natural Language Diagram Generator</h1>
+        <textarea id="query" rows="4" placeholder="Create a flowchart showing the process of making a cup of coffee"></textarea>
+        <div class="button-group">
+            <button id="generateBtn">Generate Diagram</button>
+            <div class="dropdown">
+                <button id="refineBtn"><i class="fas fa-sync-alt"></i> Refine Diagram</button>
+                <div id="refineDropdown" class="dropdown-content">
+                    <button data-type="block"><i class="fas fa-cube"></i> Block Diagram</button>
+                    <button data-type="flowchart"><i class="fas fa-project-diagram"></i> Flowchart</button>
+                    <button data-type="pie"><i class="fas fa-chart-pie"></i> Pie Chart</button>
+                </div>
+            </div>
+        </div>
+        <div class="share-buttons">
+            <button id="saveBtn"><i class="fas fa-save"></i> Save Diagram</button>
+            <button id="linkedinBtn"><i class="fab fa-linkedin"></i> Share on LinkedIn</button>
+            <button id="instagramBtn"><i class="fab fa-instagram"></i> Share on Instagram</button>
+            <button id="facebookBtn"><i class="fab fa-facebook-f"></i> Share on Facebook</button>
+        </div>
+        <div id="result">Generated diagram will appear here</div>
+    </div>
+    <button id="settingsBtn"><i class="fas fa-cog"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>

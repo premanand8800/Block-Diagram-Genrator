@@ -1,0 +1,46 @@
+blockDiagram
+  direction LR
+
+  Block "Get ingredients" {
+    Get coffee beans
+    Get water
+    Get mug
+    Get filter
+  }
+
+  Block "Grind coffee beans" {
+    Grind beans to desired consistency
+  }
+
+  Block "Prepare coffee maker" {
+    Place filter in coffee maker
+    Add ground coffee to filter
+  }
+
+  Block "Add water" {
+    Add water to coffee maker
+  }
+
+  Block "Brew coffee" {
+    Turn on coffee maker and brew coffee
+  }
+
+  Block "Pour coffee" {
+    Pour brewed coffee into mug
+  }
+
+  Block "Add extras" {
+    Add milk, sugar, or other desired extras
+  }
+
+  Block "Enjoy" {
+    Enjoy your freshly brewed cup of coffee
+  }
+
+  "Get ingredients" --> "Grind coffee beans"
+  "Grind coffee beans" --> "Prepare coffee maker"
+  "Prepare coffee maker" --> "Add water"
+  "Add water" --> "Brew coffee"
+  "Brew coffee" --> "Pour coffee"
+  "Pour coffee" --> "Add extras"
+  "Add extras" --> "Enjoy"

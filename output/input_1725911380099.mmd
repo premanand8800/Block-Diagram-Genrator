@@ -1,0 +1,15 @@
+graph LR
+A[Set Groq API Key] --env.GROQ_API_KEY = "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"--> B{Require Packages}
+B --> C[express]
+B --> D[groq-sdk]
+B --> E[mermaid-cli]
+B --> F[fs]
+B --> G[path]
+
+C --> H[express.json()]
+C --> I[express.static]
+
+J[Generate Diagram] --> K[analyzeError]
+J --> L[regenerateDiagram]
+
+M[/] --> N(App Endpoint)

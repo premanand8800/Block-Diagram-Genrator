@@ -1,0 +1,22 @@
+graph TD
+
+subgraph Network Layer
+    internet[Internet]
+    router[Router]
+end
+
+subgraph Network Intrusion Detection System (NIDS)
+    nids[NIDS (based on FPGA)]
+    robust[Robust Design]
+end
+
+subgraph Application Layer
+    client[Client]
+    server[Server]
+end
+
+internet --> router
+router --> nids
+nids --> robust
+robust --> client
+robust --> server

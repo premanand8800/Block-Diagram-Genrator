@@ -1,0 +1,10 @@
+graph LR
+A[Express] --> B[app]
+B --> C[app.use(json)]
+B --> D[app.use(static)]
+B --> E[app.post('/generate-diagram')]
+E --> F[groq.chat.completions.create]
+F --> G[response]
+G --> H[assistantResponse]
+H --> I[mermaidCode]
+H --> J[explanation]

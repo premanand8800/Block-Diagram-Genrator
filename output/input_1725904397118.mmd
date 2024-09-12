@@ -1,0 +1,10 @@
+graph TB
+    A[Start] --> B(Load necessary data set)
+    B --> C{Use D3.js methods}
+    C -->|Bind data to SVG elements| D[Render chart (e.g. bar chart or map)]
+    D --> E[Visualize population data]
+    E --> F[End]
+    A --> G[Find resources and examples]
+    G --> H{GitHub repositories, freeCodeCamp, D3 Graph Gallery}
+    H --> I[Step-by-step guide and examples]
+    I --> F

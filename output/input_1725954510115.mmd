@@ -1,0 +1,9 @@
+graph TB
+    A[Battery] ---|Power| B[Electric Motor]
+    B ---|Motion| C[Wheels]
+    A ---|Control| D[ BCM (Body Control Module)]
+    D ---|Communication| E[Gateway]
+    E ---|Communication| F[Infotainment System]
+    E ---|Communication| G[Telematics Control Unit]
+    E ---|Communication| H[Vehicle Control Unit]
+    I[Charging Port] ---|Charging| A

@@ -1,0 +1,9 @@
+blockDiagram
+  BlockGAN("Generative Adversarial Network")
+  BlockGAN --> BlockDiscriminator("Discriminator")
+  BlockGAN --> BlockGenerator("Generator")
+  BlockData("Data: Image, Text Prompt")
+  BlockData --> BlockGenerator
+  BlockGenerator --> BlockImages("Generated Images")
+  BlockDiscriminator --> BlockRealFake("Real/Fake Prediction")
+  BlockImages --> BlockDiscriminator

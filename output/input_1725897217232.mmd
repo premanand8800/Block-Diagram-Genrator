@@ -1,0 +1,8 @@
+graph LR
+    A[Request Arrives] --> B[express.json()]
+    B --> C[express.static('public')]
+    C --> D[app.post('/generate-diagram')]
+    D --> E[Groq Completions API Call]
+    E --> F[Groq Processes Query]
+    F --> G[Mermaid Code Generated]
+    G --> H[Response Sent]

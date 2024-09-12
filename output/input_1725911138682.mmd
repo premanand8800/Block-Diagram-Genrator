@@ -1,0 +1,8 @@
+graph LR
+    A[Power Source] -- Generates --> B[AC Power]
+    B -- Transforms to --> C[DC Power]
+    C -- Distributes to --> D[Loads]
+    D -- Monitored and Controlled by --> E[Supervisory Control and Data Acquisition (SCADA) System]
+    E -- Feeds back to --> C
+    C -- Stores in --> F[Energy Storage System]
+    F -- Provides back-up power to --> B
